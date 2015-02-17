@@ -1,5 +1,7 @@
 require "dr_pyg/version"
+require "kramdown"
+require "kramdown/converter/syntax_highlighter/pygments"
 
 module DrPyg
-  # Your code goes here...
+  ::Kramdown::Converter.add_syntax_highlighter(:pygments, ::Kramdown::Converter::SyntaxHighlighter::Pygments)
 end
